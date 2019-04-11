@@ -1,0 +1,42 @@
+// demo defaults
+.app-top {
+  margin: 0 0 3em;
+}
+
+.app-calendar {
+  margin: 0 auto;
+  max-width: 900px;
+}
+
+// width > screen-md-min => So that the demo is like my app code
+/deep/ full-calendar > div.fc-toolbar.fc-header-toolbar > div.fc-left {
+    float: left !important;
+}
+
+/deep/ full-calendar > div.fc-toolbar.fc-header-toolbar > div.fc-center {
+    display: inline-block !important;
+}
+
+/deep/ full-calendar > div.fc-toolbar.fc-header-toolbar > div.fc-right {
+    float: right  !important;
+}
+
+// with < screen-md-min
+@media (min-width: 768px) {
+  /deep/ full-calendar > div.fc-toolbar > div.fc-left {
+      display: block !important;
+      float: none !important;
+      width: 100% !important;
+  }
+  /deep/ full-calendar > div.fc-toolbar > div.fc-center {
+      display: block !important;
+      float: none !important;
+      width: 100% !important;
+  }
+  /deep/ full-calendar > div.fc-toolbar > div.fc-right {
+      display: block !important;
+      float: none !important;
+      width: 100% !important;
+  }
+}
+
